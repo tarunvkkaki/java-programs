@@ -1,4 +1,5 @@
 public class Basic {
+   
     /*
      * Time Complexity: O(LCM(a, b) - max(a, b) + 1), worst case O(a * b)
      * Space Complexity: O(1)
@@ -12,5 +13,23 @@ public class Basic {
             }
             result++;
         }
+    }
+    /*
+     * Time Complexity: O(log(min(a, b)))
+     * Space Complexity: O(1)
+     */
+    public int lcmUsingGCD(int firstNumber, int secondNumber) {
+        return (firstNumber * secondNumber) / gcd(firstNumber, secondNumber);
+    }
+
+    /*
+     * Time Complexity: O(log(min(a, b)))
+     * Space Complexity: O(1)
+     */
+    public int gcd(int firstNumber, int secondNumber) {
+        if(secondNumber == 0) {
+            return firstNumber;
+        }
+        return gcd(secondNumber, firstNumber % secondNumber);
     }
 }
