@@ -1,6 +1,8 @@
+import interviewPrograms.basic.Basic;
+
 public class Main {
     public static void main(String[] args) {
-        Lcm l = new Lcm();
-        System.out.println(l.lcm(4, 6));
+        Basic basic = new Basic();
+        System.out.println(basic.lcm(4, 6));
     }
 }
